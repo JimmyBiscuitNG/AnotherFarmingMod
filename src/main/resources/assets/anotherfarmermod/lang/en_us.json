@@ -1,4 +1,6 @@
 {
   "item.anotherfarmermod.wild_carrot": "Wild Carrot",
-  "item.anotherfarmermod.cooked_wild_carrot": "Cooked Wild Carrot"
+  "item.anotherfarmermod.cooked_wild_carrot": "Cooked Wild Carrot",
+  "item.anotherfarmermod.cucumber": "Cucumber",
+  "itemgroup.anotherfarmermod.farmer_items": "Another Farmer Mod"
 }
