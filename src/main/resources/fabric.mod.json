@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "anotherfarmermod",
+	"version": "${version}",
+	"name": "anotherfarmermod",
+	"description": "Farming",
+	"authors": [
+		"BiscuitGirl"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/anotherfarmermod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.farming.soil.Anotherfarmermod"
+		],
+		"fabric-datagen": [
+			"net.farming.soil.AnotherfarmermodDataGenerator"
+		],
+		"client": [
+			"net.farming.soil.FarmerClient"
+		]
+	},
+	"mixins": [
+		"anotherfarmermod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
