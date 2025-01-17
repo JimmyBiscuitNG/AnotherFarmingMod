@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.farming.soil.Anotherfarmermod"
+			"net.farming.soil.AnotherFarmerMod"
 		],
 		"fabric-datagen": [
-			"net.farming.soil.AnotherfarmermodDataGenerator"
+			"net.farming.soil.AnotherFarmerModDataGenerator"
 		],
 		"client": [
 			"net.farming.soil.FarmerClient"
