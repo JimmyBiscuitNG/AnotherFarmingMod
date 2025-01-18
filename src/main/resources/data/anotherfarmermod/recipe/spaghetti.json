@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": "anotherfarmermod:noodles",
+    "X": "anotherfarmermod:tomato_sauce",
+    "D": "minecraft:cooked_beef"
+  },
+  "pattern": [
+    " D ",
+    "XXX",
+    " / "
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:spaghetti"
+  }
+}

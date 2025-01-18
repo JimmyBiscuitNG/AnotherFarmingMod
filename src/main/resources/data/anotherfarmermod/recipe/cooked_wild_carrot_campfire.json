@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": "anotherfarmermod:wild_carrot",
+  "result": {
+    "id": "anotherfarmermod:cooked_wild_carrot"
+  }
+}

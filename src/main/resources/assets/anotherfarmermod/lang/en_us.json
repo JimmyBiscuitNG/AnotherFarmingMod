@@ -2,5 +2,10 @@
   "item.anotherfarmermod.wild_carrot": "Wild Carrot",
   "item.anotherfarmermod.cooked_wild_carrot": "Cooked Wild Carrot",
   "item.anotherfarmermod.cucumber": "Cucumber",
+  "item.anotherfarmermod.tomato": "Tomato",
+  "item.anotherfarmermod.tomato_sauce": "Tomato Sauce",
+  "item.anotherfarmermod.grapes": "Grapes",
+  "item.anotherfarmermod.noodles": "Noodles",
+  "item.anotherfarmermod.spaghetti": "Spaghetti",
   "itemgroup.anotherfarmermod.farmer_items": "Another Farmer Mod"
 }

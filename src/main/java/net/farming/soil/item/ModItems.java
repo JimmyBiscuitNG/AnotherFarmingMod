@@ -2,10 +2,7 @@ package net.farming.soil.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
-import net.minecraft.component.type.ConsumableComponent;
-import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -17,6 +14,11 @@ public class ModItems {
     public static final Item WILD_CARROT = registerItem("wild_carrot", new Item(new Item.Settings().food(ModFoodComponents.WILD_CARROT).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"wild_carrot")))));
     public static final Item COOKED_WILD_CARROT = registerItem("cooked_wild_carrot", new Item(new Item.Settings().food(ModFoodComponents.COOKED_WILD_CARROT).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"cooked_wild_carrot")))));
     public static final Item CUCUMBER = registerItem("cucumber", new Item(new Item.Settings().food(ModFoodComponents.CUCUMBER).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"cucumber")))));
+    public static final Item TOMATO = registerItem("tomato", new Item(new Item.Settings().food(ModFoodComponents.TOMATO).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"tomato")))));
+    public static final Item TOMATO_SAUCE = registerItem("tomato_sauce", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"tomato_sauce")))));
+    public static final Item GRAPES = registerItem("grapes", new Item(new Item.Settings().food(ModFoodComponents.GRAPES).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"grapes")))));
+    public static final Item NOODLES = registerItem("noodles", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"noodles")))));
+    public static final Item SPAGHETTI = registerItem("spaghetti", new Item(new Item.Settings().food(ModFoodComponents.SPAGHETTI).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"spaghetti")))));
 
 
 
@@ -31,6 +33,11 @@ public class ModItems {
             fabricItemGroupEntries.add(WILD_CARROT);
             fabricItemGroupEntries.add(COOKED_WILD_CARROT);
             fabricItemGroupEntries.add(CUCUMBER);
+            fabricItemGroupEntries.add(TOMATO);
+            fabricItemGroupEntries.add(TOMATO_SAUCE);
+            fabricItemGroupEntries.add(GRAPES);
+            fabricItemGroupEntries.add(NOODLES);
+            fabricItemGroupEntries.add(SPAGHETTI);
         });
     }
 }
