@@ -9,7 +9,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -31,7 +30,7 @@ public class TomatoBush extends SweetBerryBushBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        int i = (Integer)state.get(AGE);
+        int i = state.get(AGE);
         boolean bl = i == 3;
         if (i > 1) {
             int j = 1 + world.random.nextInt(2);
