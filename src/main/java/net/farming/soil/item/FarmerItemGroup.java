@@ -2,7 +2,7 @@ package net.farming.soil.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.farming.soil.AnotherFarmerMod;
-import net.farming.soil.block.custom.ModBlocks;
+import net.farming.soil.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;

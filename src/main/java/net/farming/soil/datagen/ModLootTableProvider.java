@@ -2,6 +2,21 @@ package net.farming.soil.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.farming.soil.block.ModBlocks;
+import net.farming.soil.block.custom.TomatoBush;
+import net.farming.soil.item.ModItems;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -13,5 +28,36 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
+
+        addDrop(ModBlocks.STRAWBERRY_BUSH, LootTable.builder().pool(addSurvivesExplosionCondition(ModBlocks.STRAWBERRY_BUSH, LootPool.builder()
+                .rolls(new UniformLootNumberProvider(new ConstantLootNumberProvider(1), new ConstantLootNumberProvider(4)))
+                .with(ItemEntry.builder(ModItems.STRAWBERRY)))));
+
+        this.addDrop(
+                ModBlocks.TOMATO_BUSH,
+                block -> this.applyExplosionDecay(
+                        block,
+                        LootTable.builder()
+                                .pool(
+                                        LootPool.builder()
+                                                .conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_BUSH)
+                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 3))
+                                                )
+                                                .with(ItemEntry.builder(ModItems.TOMATO))
+                                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                )
+                                .pool(
+                                        LootPool.builder()
+                                                .conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_BUSH)
+                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 2))
+                                                )
+                                                .with(ItemEntry.builder(ModItems.TOMATO))
+                                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                )));
     }
 }

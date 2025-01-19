@@ -1,12 +1,12 @@
-package net.farming.soil.block.custom;
+package net.farming.soil.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.item.FarmerItemGroup;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
-import net.minecraft.client.render.item.tint.GrassTintSource;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -28,7 +28,6 @@ public class ModBlocks {
 
         return Registry.register(Registries.BLOCK, blockKey, block);
     }
-    public static void initialize() {}
 
     public static final RegistryKey<Block> STRAWBERRY_BUSH_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
@@ -36,16 +35,31 @@ public class ModBlocks {
     );
 
     public static final Block STRAWBERRY_BUSH = register(
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).nonOpaque().burnable().registryKey(STRAWBERRY_BUSH_KEY).sounds(BlockSoundGroup.GRASS)),
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).nonOpaque().hardness(0.3f).registryKey(STRAWBERRY_BUSH_KEY).sounds(BlockSoundGroup.GRASS)),
             STRAWBERRY_BUSH_KEY,
             true
 
 
     );
+
+    public static final RegistryKey<Block> TOMATO_BUSH_KEYS = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(AnotherFarmerMod.MOD_ID, "tomato_bush")
+
+
+    );
+
+    public static final Block TOMATO_BUSH = register(
+            new Block(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(TOMATO_BUSH_KEYS)),
+            TOMATO_BUSH_KEYS,
+            false
+
+
+    );
+
     public static void registerBlockItems() {
-        ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_MISC_KEY).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(STRAWBERRY_BUSH);
-        });
+        ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_MISC_KEY).register(fabricItemGroupEntries ->
+                fabricItemGroupEntries.add(STRAWBERRY_BUSH));
     }
 }
 
