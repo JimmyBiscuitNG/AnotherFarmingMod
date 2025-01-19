@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "anotherfarmermod:strawberry",
+    "U": "minecraft:glass_bottle"
+  },
+  "pattern": [
+    "###",
+    "###",
+    " U "
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:strawberry_jam"
+  }
+
+
+}

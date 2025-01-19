@@ -7,5 +7,14 @@
   "item.anotherfarmermod.grapes": "Grapes",
   "item.anotherfarmermod.noodles": "Noodles",
   "item.anotherfarmermod.spaghetti": "Spaghetti",
-  "itemgroup.anotherfarmermod.farmer_items": "Another Farmer Mod"
+  "item.anotherfarmermod.strawberry": "Strawberry",
+  "item.anotherfarmermod.strawberry_jam": "Strawberry Jam",
+  "item.anotherfarmermod.peanuts": "Peanuts",
+  "item.anotherfarmermod.peanut_butter": "Peanut Butter",
+  "item.anotherfarmermod.pbnj": "Peanut Butter & Jelly Sandwich",
+  "item.anotherfarmermod.tomato_crop": "Tomato Crop",
+  "item.anotherfarmermod.strawberry_bush": "Strawberry Bush",
+  "itemgroup.anotherfarmermod.farmer_ingredients": "AFM Ingredients",
+  "itemgroup.anotherfarmermod.farmer_items": "AFM Prepared Food",
+  "itemgroup.anotherfarmermod.farmer_misc": "AFM Misc"
 }

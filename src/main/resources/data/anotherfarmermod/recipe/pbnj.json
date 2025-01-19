@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "anotherfarmermod:peanut_butter",
+    "J": "anotherfarmermod:strawberry_jam",
+    "U": "minecraft:bread"
+  },
+  "pattern": [
+    "P",
+    "J",
+    "U"
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:pbnj"
+  }
+
+
+}
