@@ -3,14 +3,12 @@ package net.farming.soil.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.farming.soil.block.ModBlocks;
+import net.farming.soil.block.custom.StrawberryBush;
 import net.farming.soil.block.custom.TomatoBush;
 import net.farming.soil.item.ModItems;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TexturedModel;
-import net.minecraft.client.render.item.tint.TintSource;
-import net.minecraft.client.render.item.tint.TintSourceTypes;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -20,9 +18,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STRAWBERRY_BUSH);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.STRAWBERRY_BUSH,
+                BlockStateModelGenerator.CrossType.NOT_TINTED, StrawberryBush.AGE, 0, 1, 2, 3, 4, 5);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.TOMATO_BUSH,
-                BlockStateModelGenerator.CrossType.NOT_TINTED, TomatoBush.AGE, 0, 1, 2, 3);
+                BlockStateModelGenerator.CrossType.NOT_TINTED, TomatoBush.AGE, 0, 1, 2, 3, 4);
     }
 
 

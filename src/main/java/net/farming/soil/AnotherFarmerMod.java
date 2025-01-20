@@ -26,9 +26,6 @@ public class AnotherFarmerMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		//strawberry block
-		ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-			return 0xBFFFD7;
-		}, ModBlocks.STRAWBERRY_BUSH);
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STRAWBERRY_BUSH, RenderLayer.getCutout());
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRAWBERRY_BUSH, 60, 30);
 

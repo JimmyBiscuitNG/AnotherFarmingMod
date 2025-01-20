@@ -1,5 +1,5 @@
-[22:43:10] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.4 with Fabric Loader 0.16.10
-[22:43:10] [main/INFO] (FabricLoader) Loading 55 mods:
+[09:55:46] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.4 with Fabric Loader 0.16.10
+[09:55:46] [main/INFO] (FabricLoader) Loading 55 mods:
 	- anotherfarmermod 1.0.0
 	- fabric-api 0.114.3+1.21.4
 	- fabric-api-base 0.4.54+b47eab6b04
@@ -55,26 +55,46 @@
 	- java 21
 	- minecraft 1.21.4
 	- mixinextras 0.4.1
-[22:43:10] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/michelle/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[22:43:10] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[22:43:10] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[22:43:11] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[22:43:11] [Datafixer Bootstrap/INFO] (Minecraft) 243 Datafixer optimizations took 109 milliseconds
-[22:43:13] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[22:43:13] [Render thread/INFO] (Minecraft) Setting user: Player31
-[22:43:13] [Render thread/INFO] (anotherfarmermod) Item Groups for anotherfarmermod
-[22:43:13] [Render thread/INFO] (anotherfarmermod) registering mod items for anotherfarmermod
-[22:43:13] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[22:43:14] [Render thread/INFO] (FabricDataGenHelper) Running data generator for anotherfarmermod
-[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:block
-[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:block finished after 1 ms
-[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:item
-[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:item finished after 0 ms
-[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Block Loot Tables
-[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Block Loot Tables finished after 8 ms
-[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Model Definitions
-[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Model Definitions finished after 28 ms
-[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/
-[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/ finished after 1 ms
-[22:43:14] [Render thread/INFO] (Minecraft) All providers took: 40 ms
-[22:43:14] [Render thread/INFO] (Minecraft) Caching: total files: 39, old count: 32, new count: 40, removed stale: 0, written: 8
+[09:55:46] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/michelle/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[09:55:47] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[09:55:47] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[09:55:47] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[09:55:47] [Datafixer Bootstrap/INFO] (Minecraft) 243 Datafixer optimizations took 117 milliseconds
+[09:55:50] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[09:55:50] [Render thread/INFO] (Minecraft) Setting user: Player332
+[09:55:50] [Render thread/INFO] (anotherfarmermod) Item Groups for anotherfarmermod
+[09:55:50] [Render thread/INFO] (anotherfarmermod) registering mod items for anotherfarmermod
+[09:55:50] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[09:55:50] [Render thread/INFO] (FabricDataGenHelper) Running data generator for anotherfarmermod
+[09:55:50] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:block
+[09:55:50] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:block finished after 1 ms
+[09:55:50] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:item
+[09:55:50] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:item finished after 0 ms
+[09:55:50] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Block Loot Tables
+[09:55:50] [Render thread/INFO] (Minecraft) anotherfarmermod/Block Loot Tables finished after 9 ms
+[09:55:50] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Model Definitions
+[09:55:50] [Render thread/ERROR] (FabricDataGenHelper) Failed to run data generation
+java.lang.RuntimeException: Failed to run data generator from mod (anotherfarmermod)
+	at knot/net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:156) ~[fabric-data-generation-api-v1-22.2.7+20ea1e2304.jar:?]
+	at knot/net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.run(FabricDataGenHelper.java:95) [fabric-data-generation-api-v1-22.2.7+20ea1e2304.jar:?]
+	at knot/net.minecraft.client.MinecraftClient.handler$zef000$fabric-data-generation-api-v1$main(MinecraftClient.java:4083) [minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:535) [minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:224) [minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) [fabric-loader-0.16.10.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.10.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.16.10.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: java.lang.IllegalStateException: Property IntProperty{name=age, clazz=class java.lang.Integer, values=[0, 1, 2, 3, 4, 5]} is not defined for block Block{anotherfarmermod:strawberry_bush}
+	at knot/net.minecraft.client.data.VariantsBlockStateSupplier.method_25772(VariantsBlockStateSupplier.java:50) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/com.google.common.collect.ImmutableList.forEach(ImmutableList.java:423) ~[guava-33.3.1-jre.jar:?]
+	at knot/net.minecraft.client.data.VariantsBlockStateSupplier.coordinate(VariantsBlockStateSupplier.java:48) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.client.data.BlockStateModelGenerator.registerTintableCrossBlockStateWithStages(BlockStateModelGenerator.java:1429) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.farming.soil.datagen.ModModelProvider.generateBlockStateModels(ModModelProvider.java:21) ~[main/:?]
+	at knot/net.minecraft.client.data.ModelProvider.redirect$zei000$fabric-data-generation-api-v1$registerBlockStateModels(ModelProvider.java:555) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.client.data.ModelProvider.run(ModelProvider.java:45) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.data.DataCache.run(DataCache.java:96) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.minecraft.data.DataGenerator.method_46563(DataGenerator.java:42) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[?:?]
+	at knot/net.minecraft.data.DataGenerator.run(DataGenerator.java:36) ~[minecraft-merged-abba00472f-1.21.4-net.fabricmc.yarn.1_21_4.1.21.4+build.8-v2.jar:?]
+	at knot/net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:151) ~[fabric-data-generation-api-v1-22.2.7+20ea1e2304.jar:?]
+	... 8 more

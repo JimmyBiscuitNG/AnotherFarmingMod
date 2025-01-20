@@ -2,12 +2,10 @@ package net.farming.soil.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
+import net.farming.soil.block.custom.StrawberryBush;
 import net.farming.soil.block.custom.TomatoBush;
 import net.farming.soil.item.FarmerItemGroup;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -36,9 +34,9 @@ public class ModBlocks {
     );
 
     public static final Block STRAWBERRY_BUSH = register(
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).nonOpaque().hardness(0.3f).registryKey(STRAWBERRY_BUSH_KEY).sounds(BlockSoundGroup.GRASS)),
+            new StrawberryBush(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(STRAWBERRY_BUSH_KEY)),
             STRAWBERRY_BUSH_KEY,
-            true
+            false
 
 
     );
@@ -53,14 +51,12 @@ public class ModBlocks {
     public static final Block TOMATO_BUSH = register(
             new TomatoBush(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(TOMATO_BUSH_KEYS)),
             TOMATO_BUSH_KEYS,
-            true
+            false
 
 
     );
 
     public static void registerBlockItems() {
-        ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_MISC_KEY).register(fabricItemGroupEntries ->
-                fabricItemGroupEntries.add(STRAWBERRY_BUSH));
     }
 }
 
