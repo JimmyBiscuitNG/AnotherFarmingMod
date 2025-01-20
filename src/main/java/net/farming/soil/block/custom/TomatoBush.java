@@ -41,7 +41,7 @@ public class TomatoBush extends SweetBerryBushBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         int i = state.get(AGE);
         boolean bl = i == 3;
-        if (i > 3) {
+        if (i > 1) {
             int j = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.TOMATO, j + (bl ? 1 : 0)));
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
