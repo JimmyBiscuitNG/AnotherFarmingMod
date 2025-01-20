@@ -33,7 +33,8 @@ public class AnotherFarmerMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRAWBERRY_BUSH, 60, 30);
 
 		//Tomato bush
-
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TOMATO_BUSH, RenderLayer.getCutout());
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.TOMATO_BUSH, 60, 30);
 
 		//composting
 		CompostingChanceRegistry.INSTANCE.add(ModItems.WILD_CARROT, 0.35f);

@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -18,9 +19,13 @@ import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
 public class TomatoBush extends SweetBerryBushBlock {
-    public static final IntProperty AGE = IntProperty.of("age", 0, 3);
     public TomatoBush(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        super.appendProperties(builder);
     }
 
     @Override

@@ -1,0 +1,80 @@
+[22:43:10] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.4 with Fabric Loader 0.16.10
+[22:43:10] [main/INFO] (FabricLoader) Loading 55 mods:
+	- anotherfarmermod 1.0.0
+	- fabric-api 0.114.3+1.21.4
+	- fabric-api-base 0.4.54+b47eab6b04
+	- fabric-api-lookup-api-v1 1.6.86+b1caf1e904
+	- fabric-biome-api-v1 15.0.6+b1c29d8e04
+	- fabric-block-api-v1 1.0.31+7feeb73304
+	- fabric-block-view-api-v2 1.0.19+7feeb73304
+	- fabric-blockrenderlayer-v1 2.0.8+7feeb73304
+	- fabric-client-gametest-api-v1 3.1.0+20da279604
+	- fabric-client-tags-api-v1 1.1.29+20ea1e2304
+	- fabric-command-api-v1 1.2.62+f71b366f04
+	- fabric-command-api-v2 2.2.41+e496eb1504
+	- fabric-commands-v0 0.2.79+df3654b304
+	- fabric-content-registries-v0 9.1.15+7feeb73304
+	- fabric-convention-tags-v1 2.1.13+7f945d5b04
+	- fabric-convention-tags-v2 2.11.0+dfeded7d04
+	- fabric-crash-report-info-v1 0.3.6+7feeb73304
+	- fabric-data-attachment-api-v1 1.5.0+314f4e4504
+	- fabric-data-generation-api-v1 22.2.7+20ea1e2304
+	- fabric-dimensions-v1 4.0.10+7feeb73304
+	- fabric-entity-events-v1 2.0.12+60fccc7604
+	- fabric-events-interaction-v0 4.0.3+a4eebcf004
+	- fabric-game-rule-api-v1 1.0.63+7d48d43904
+	- fabric-gametest-api-v1 2.0.22+7feeb73304
+	- fabric-item-api-v1 11.1.15+203e6b2304
+	- fabric-item-group-api-v1 4.1.24+7d48d43904
+	- fabric-key-binding-api-v1 1.0.57+7d48d43904
+	- fabric-keybindings-v0 0.2.55+df3654b304
+	- fabric-lifecycle-events-v1 2.5.4+bf2a60eb04
+	- fabric-loot-api-v2 3.0.34+3f89f5a504
+	- fabric-loot-api-v3 1.0.22+203e6b2304
+	- fabric-message-api-v1 6.0.25+7feeb73304
+	- fabric-model-loading-api-v1 4.2.1+8041d50704
+	- fabric-networking-api-v1 4.3.10+8998135104
+	- fabric-object-builder-api-v1 18.0.9+7d48d43904
+	- fabric-particles-v1 4.0.14+7feeb73304
+	- fabric-recipe-api-v1 8.0.9+160b66fa04
+	- fabric-registry-sync-v0 6.1.5+625daf4704
+	- fabric-renderer-api-v1 5.0.3+50f0feb204
+	- fabric-renderer-indigo 2.0.3+50f0feb204
+	- fabric-rendering-data-attachment-v1 0.3.57+73761d2e04
+	- fabric-rendering-fluids-v1 3.1.19+7feeb73304
+	- fabric-rendering-v1 10.1.2+b874120c04
+	- fabric-resource-conditions-api-v1 5.0.13+203e6b2304
+	- fabric-resource-loader-v0 3.0.12+7d48d43904
+	- fabric-screen-api-v1 2.0.38+7feeb73304
+	- fabric-screen-handler-api-v1 1.3.112+7feeb73304
+	- fabric-sound-api-v1 1.0.32+7feeb73304
+	- fabric-tag-api-v1 1.0.3+7d48d43904
+	- fabric-transfer-api-v1 5.4.9+efa825c904
+	- fabric-transitive-access-wideners-v1 6.3.2+56e78b9b04
+	- fabricloader 0.16.10
+	- java 21
+	- minecraft 1.21.4
+	- mixinextras 0.4.1
+[22:43:10] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/michelle/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[22:43:10] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[22:43:10] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[22:43:11] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[22:43:11] [Datafixer Bootstrap/INFO] (Minecraft) 243 Datafixer optimizations took 109 milliseconds
+[22:43:13] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[22:43:13] [Render thread/INFO] (Minecraft) Setting user: Player31
+[22:43:13] [Render thread/INFO] (anotherfarmermod) Item Groups for anotherfarmermod
+[22:43:13] [Render thread/INFO] (anotherfarmermod) registering mod items for anotherfarmermod
+[22:43:13] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[22:43:14] [Render thread/INFO] (FabricDataGenHelper) Running data generator for anotherfarmermod
+[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:block
+[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:block finished after 1 ms
+[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:item
+[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:item finished after 0 ms
+[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Block Loot Tables
+[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Block Loot Tables finished after 8 ms
+[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Model Definitions
+[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/Model Definitions finished after 28 ms
+[22:43:14] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/
+[22:43:14] [Render thread/INFO] (Minecraft) anotherfarmermod/ finished after 1 ms
+[22:43:14] [Render thread/INFO] (Minecraft) All providers took: 40 ms
+[22:43:14] [Render thread/INFO] (Minecraft) Caching: total files: 39, old count: 32, new count: 40, removed stale: 0, written: 8

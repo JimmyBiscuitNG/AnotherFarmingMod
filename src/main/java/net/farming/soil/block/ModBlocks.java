@@ -2,6 +2,7 @@ package net.farming.soil.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
+import net.farming.soil.block.custom.TomatoBush;
 import net.farming.soil.item.FarmerItemGroup;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -50,9 +51,9 @@ public class ModBlocks {
     );
 
     public static final Block TOMATO_BUSH = register(
-            new Block(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(TOMATO_BUSH_KEYS)),
+            new TomatoBush(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(TOMATO_BUSH_KEYS)),
             TOMATO_BUSH_KEYS,
-            false
+            true
 
 
     );
