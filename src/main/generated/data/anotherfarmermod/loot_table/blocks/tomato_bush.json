@@ -13,14 +13,14 @@
           "block": "anotherfarmermod:tomato_bush",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "4"
+            "age": "3"
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anotherfarmermod:tomato"
+          "name": "minecraft:tomato"
         }
       ],
       "functions": [
@@ -51,14 +51,14 @@
           "block": "anotherfarmermod:tomato_bush",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "3"
+            "age": "2"
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anotherfarmermod:tomato"
+          "name": "minecraft:tomato"
         }
       ],
       "functions": [

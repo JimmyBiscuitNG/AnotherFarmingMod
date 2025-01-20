@@ -3,8 +3,8 @@
   "category": "food",
   "cookingtime": 200,
   "experience": 0.35,
-  "ingredient": "anotherfarmermod:wild_carrot",
+  "ingredient": "minecraft:carrot",
   "result": {
-    "id": "anotherfarmermod:cooked_wild_carrot"
+    "id": "anotherfarmermod:cooked_carrot"
   }
 }

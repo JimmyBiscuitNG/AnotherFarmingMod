@@ -39,7 +39,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         LootPool.builder()
                                                 .conditionally(
                                                         BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_BUSH)
-                                                                .properties(StatePredicate.Builder.create().exactMatch(StrawberryBush.AGE, 5))
+                                                                .properties(StatePredicate.Builder.create().exactMatch(StrawberryBush.AGE, 3))
                                                 )
                                                 .with(ItemEntry.builder(ModItems.STRAWBERRY))
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
@@ -49,7 +49,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         LootPool.builder()
                                                 .conditionally(
                                                         BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_BUSH)
-                                                                .properties(StatePredicate.Builder.create().exactMatch(StrawberryBush.AGE, 4))
+                                                                .properties(StatePredicate.Builder.create().exactMatch(StrawberryBush.AGE, 2))
                                                 )
                                                 .with(ItemEntry.builder(ModItems.STRAWBERRY))
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
@@ -66,7 +66,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         LootPool.builder()
                                                 .conditionally(
                                                         BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_BUSH)
-                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 4))
+                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 3))
                                                 )
                                                 .with(ItemEntry.builder(ModItems.TOMATO))
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
@@ -76,7 +76,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         LootPool.builder()
                                                 .conditionally(
                                                         BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_BUSH)
-                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 3))
+                                                                .properties(StatePredicate.Builder.create().exactMatch(TomatoBush.AGE, 2))
                                                 )
                                                 .with(ItemEntry.builder(ModItems.TOMATO))
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))

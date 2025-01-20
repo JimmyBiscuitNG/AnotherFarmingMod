@@ -12,34 +12,58 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
+
 public class ModItems {
+    public static Item register(String id, Item item, RegistryKey<Item> registryKey) {
+        Item registeredItem = Registry.register(Registries.ITEM, registryKey.getValue(), item);
 
-    //food
-    public static final Item WILD_CARROT = registerItem("wild_carrot", new Item(new Item.Settings().food(ModFoodComponents.WILD_CARROT).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"wild_carrot")))));
-    public static final Item COOKED_WILD_CARROT = registerItem("cooked_wild_carrot", new Item(new Item.Settings().food(ModFoodComponents.COOKED_WILD_CARROT).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"cooked_wild_carrot")))));
-    public static final Item CUCUMBER = registerItem("cucumber", new Item(new Item.Settings().food(ModFoodComponents.CUCUMBER).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"cucumber")))));
-    public static final Item TOMATO = registerItem("tomato", new BlockItem(ModBlocks.TOMATO_BUSH, new Item.Settings().food(ModFoodComponents.TOMATO).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"tomato")))));
-    public static final Item TOMATO_SAUCE = registerItem("tomato_sauce", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"tomato_sauce")))));
-    public static final Item GRAPES = registerItem("grapes", new Item(new Item.Settings().food(ModFoodComponents.GRAPES).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"grapes")))));
-    public static final Item NOODLES = registerItem("noodles", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"noodles")))));
-    public static final Item SPAGHETTI = registerItem("spaghetti", new Item(new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"spaghetti")))));
-    public static final Item STRAWBERRY = registerItem("strawberry", new BlockItem(ModBlocks.STRAWBERRY_BUSH, new  Item.Settings().food(ModFoodComponents.STRAWBERRY).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"strawberry")))));
-    public static final Item STRAWBERRY_JAM = registerItem("strawberry_jam", new Item(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"strawberry_jam")))));
-    public static final Item PEANUTS = registerItem("peanuts", new Item(new Item.Settings().food(ModFoodComponents.PEANUTS).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"peanuts")))));
-    public static final Item PEANUT_BUTTER = registerItem("peanut_butter", new Item(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"peanut_butter")))));
-    public static final Item PBNJ = registerItem("pbnj", new Item(new Item.Settings().food(ModFoodComponents.PBNJ).maxCount(16).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"pbnj")))));
-    public static final Item MACNOODLE = registerItem("macnoodle", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"macnoodle")))));
-
-    //tools
-
-    public
-
-
-
-
-    static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, name), item);
+        return registeredItem;
     }
+
+    public static Item registerBlock(String id, BlockItem blockItem, Item item, RegistryKey<Item> registryKey) {
+
+        Item registeredItem = Registry.register(Registries.ITEM, registryKey.getValue(), item);
+
+        return registeredItem;
+    }
+
+    //Keys
+    public static final RegistryKey<Item> COOKED_CARROT_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"cooked_carrot"));
+    public static final RegistryKey<Item> CUCUMBER_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "cucumber"));
+    public static final RegistryKey<Item> TOMATO_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "tomato"));
+    public static final RegistryKey<Item> TOMATO_SAUCE_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "tomato_sauce"));
+    public static final RegistryKey<Item> GRAPES_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "grapes"));
+    public static final RegistryKey<Item> NOODLES_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "noodles"));
+    public static final RegistryKey<Item> SPAGHETTI_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "spaghetti"));
+    public static final RegistryKey<Item> STRAWBERRY_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID,"strawberry"));
+    public static final RegistryKey<Item> STRAWBERRY_JAM_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "strawberry_jam"));
+    public static final RegistryKey<Item> PEANUTS_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "peanuts"));
+    public static final RegistryKey<Item> PEANUT_BUTTER_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "peanut_butter"));
+    public static final RegistryKey<Item> PBNJ_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "pbnj"));
+    public static final RegistryKey<Item> MACNOODLE_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, "macnoodle"));
+
+
+    //Food
+    public static final Item COOKED_CARROT = register("cooked_carrot", new Item(new Item.Settings().food(ModFoodComponents.COOKED_CARROT).
+            registryKey(COOKED_CARROT_KEY)), COOKED_CARROT_KEY);
+    public static final Item CUCUMBER = register("cucumber", new Item(new Item.Settings().food(ModFoodComponents.CUCUMBER).
+            registryKey(CUCUMBER_KEY)), CUCUMBER_KEY);
+    public static final Item TOMATO = registerBlock("tomato", new BlockItem(ModBlocks.TOMATO_BUSH, new Item.Settings().useItemPrefixedTranslationKey()),
+            new Item(new Item.Settings().food(ModFoodComponents.TOMATO).registryKey(TOMATO_KEY)), TOMATO_KEY);
+    public static final Item TOMATO_SAUCE = register("tomato_sauce", new Item(new Item.Settings().registryKey(TOMATO_SAUCE_KEY)), TOMATO_SAUCE_KEY);
+    public static final Item GRAPES = register("grapes", new Item(new Item.Settings().food(ModFoodComponents.GRAPES).registryKey(GRAPES_KEY)), GRAPES_KEY);
+    public static final Item NOODLES = register("noodles", new Item(new Item.Settings().registryKey(NOODLES_KEY)), NOODLES_KEY);
+    public static final Item SPAGHETTI = register("spaghetti", new Item(new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1).registryKey(SPAGHETTI_KEY)), SPAGHETTI_KEY);
+    public static final Item STRAWBERRY = registerBlock("strawberry", new BlockItem(ModBlocks.STRAWBERRY_BUSH, new Item.Settings().useItemPrefixedTranslationKey()),
+            new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY).registryKey(STRAWBERRY_KEY)), STRAWBERRY_KEY);
+    public static final Item STRAWBERRY_JAM = register("strawberry_jam", new Item(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
+            .registryKey(STRAWBERRY_JAM_KEY)), STRAWBERRY_JAM_KEY);
+    public static final Item PEANUTS = register("peanuts", new Item(new Item.Settings().food(ModFoodComponents.PEANUTS)
+            .registryKey(PEANUTS_KEY)), PEANUTS_KEY);
+    public static final Item PEANUT_BUTTER = register("peanut_butter", new Item(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)
+            .registryKey(PEANUT_BUTTER_KEY)), PEANUT_BUTTER_KEY);
+    public static final Item PBNJ = register("pbnj", new Item(new Item.Settings().food(ModFoodComponents.PBNJ).maxCount(16).registryKey(PBNJ_KEY)), PBNJ_KEY);
+    public static final Item MACNOODLE = register("macnoodle", new Item(new Item.Settings().registryKey(MACNOODLE_KEY)), MACNOODLE_KEY);
 
     public static void registerModItems() {
         AnotherFarmerMod.LOGGER.info("registering mod items for " + AnotherFarmerMod.MOD_ID);
@@ -55,13 +79,13 @@ public class ModItems {
             fabricItemGroupEntries.add(STRAWBERRY_JAM);
             fabricItemGroupEntries.add(TOMATO);
             fabricItemGroupEntries.add(TOMATO_SAUCE);
-            fabricItemGroupEntries.add(WILD_CARROT);
         });
 
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_ITEMS_KEY).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(COOKED_WILD_CARROT);
+            fabricItemGroupEntries.add(COOKED_CARROT);
             fabricItemGroupEntries.add(SPAGHETTI);
             fabricItemGroupEntries.add(PBNJ);
         });
     }
 }
+

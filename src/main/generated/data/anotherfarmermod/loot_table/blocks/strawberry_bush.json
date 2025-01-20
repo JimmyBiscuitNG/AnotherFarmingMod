@@ -13,14 +13,14 @@
           "block": "anotherfarmermod:strawberry_bush",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "5"
+            "age": "3"
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anotherfarmermod:strawberry"
+          "name": "minecraft:strawberry"
         }
       ],
       "functions": [
@@ -51,14 +51,14 @@
           "block": "anotherfarmermod:strawberry_bush",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "4"
+            "age": "2"
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anotherfarmermod:strawberry"
+          "name": "minecraft:strawberry"
         }
       ],
       "functions": [
