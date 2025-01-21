@@ -8,26 +8,27 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STRAWBERRY_BUSH_PLACED = registryKey("strawberry_bush_placed");
     public static final RegistryKey<PlacedFeature> TOMATO_BUSH_PLACED = registryKey("tomato_bush_placed");
+    public static final RegistryKey<PlacedFeature> PEANUT_PLANT_PLACED = registryKey("peanut_plant_placed");
 
 
     public static void bootstrap(Registerable<PlacedFeature> context){
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, STRAWBERRY_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_BUSH_KEY),
+        register(context, STRAWBERRY_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_BUSH_KEY), CountPlacementModifier.of(3),
                 RarityFilterPlacementModifier.of(37), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-        register(context, TOMATO_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.TOMATO_BUSH_KEY),
+
+        register(context, TOMATO_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.TOMATO_BUSH_KEY), CountPlacementModifier.of(3),
                 RarityFilterPlacementModifier.of(35), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
+        register(context, PEANUT_PLANT_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.PEANUT_PLANT_KEY), CountPlacementModifier.of(3),
+                RarityFilterPlacementModifier.of(40), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
 

@@ -1,6 +1,5 @@
 {
-  "item.anotherfarmermod.wild_carrot": "Wild Carrot",
-  "item.anotherfarmermod.cooked_wild_carrot": "Cooked Wild Carrot",
+  "item.anotherfarmermod.cooked_carrot": "Cooked Carrot",
   "item.anotherfarmermod.cucumber": "Cucumber",
   "item.anotherfarmermod.tomato": "Tomato",
   "item.anotherfarmermod.tomato_sauce": "Tomato Sauce",
@@ -14,8 +13,7 @@
   "item.anotherfarmermod.pbnj": "Peanut Butter & Jelly Sandwich",
   "item.anotherfarmermod.strawberry_bush": "Strawberry Bush",
   "item.anotherfarmermod.macnoodle": "Macaroni Noodles",
-  "item.anotherfarmermod:tomato_bush": "Tomato Bush",
-  "block.anotherfarmermod:tomato_bush": "Tomato Bush",
+  "block.anotherfarmermod.peanut_plant": "Peanut Plant",
   "itemgroup.anotherfarmermod.farmer_ingredients": "AFM Ingredients",
   "itemgroup.anotherfarmermod.farmer_items": "AFM Prepared Food",
   "itemgroup.anotherfarmermod.farmer_misc": "AFM Misc"

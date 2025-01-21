@@ -34,6 +34,12 @@ public class AnotherFarmerMod implements ModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TOMATO_BUSH, RenderLayer.getCutout());
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.TOMATO_BUSH, 60, 30);
 
+		//Peanut Plant
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PEANUT_PLANT, RenderLayer.getCutout());
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.PEANUT_PLANT, 60, 30);
+		ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xC2B62B, ModBlocks.PEANUT_PLANT);
+
+
 		//composting
 		CompostingChanceRegistry.INSTANCE.add(ModItems.TOMATO, 0.65f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.GRAPES, 0.2f);

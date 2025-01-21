@@ -18,6 +18,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STRAWBERRY_BUSH_KEY = registryKey("strawberry_bush");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TOMATO_BUSH_KEY = registryKey("tomato_bush");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PEANUT_PLANT_KEY = registryKey("peanut_plant_key");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context){
@@ -36,6 +37,11 @@ public class ModConfiguredFeatures {
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.TOMATO_BUSH.getDefaultState().
                                 with(StrawberryBush.AGE, 3))),
                         List.of(Blocks.GRASS_BLOCK)));
+
+        register(context, PEANUT_PLANT_KEY,
+                Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PEANUT_PLANT))));
     }
 
 

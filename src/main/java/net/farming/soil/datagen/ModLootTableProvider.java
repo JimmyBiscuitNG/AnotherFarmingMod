@@ -14,12 +14,17 @@ import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.LootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.state.property.IntProperty;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.random.RandomGenerator;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
@@ -82,5 +87,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
                                 )));
+
+        addDrop(ModBlocks.PEANUT_PLANT, drops(ModItems.PEANUTS, UniformLootNumberProvider.create(1.0f, 3.0F)));
     }
 }

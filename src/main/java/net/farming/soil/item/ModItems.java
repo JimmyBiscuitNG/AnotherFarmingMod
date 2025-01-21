@@ -17,34 +17,38 @@ import java.util.function.Function;
 
 public class ModItems {
 
-    //Food
-    public static final Item COOKED_CARROT = register("cooked_carrot", Item::new,
-            new Item.Settings().food(ModFoodComponents.COOKED_CARROT));
+    //Raw Foods
     public static final Item CUCUMBER = register("cucumber", Item::new,
             new Item.Settings().food(ModFoodComponents.CUCUMBER));
     public static final Item TOMATO = register("tomato",
             createBlockItemWithUniqueName(ModBlocks.TOMATO_BUSH), new Item.Settings().food(ModFoodComponents.TOMATO));
-    public static final Item TOMATO_SAUCE = register("tomato_sauce", Item::new,
-            new Item.Settings());
     public static final Item GRAPES = register("grapes", Item::new,
             new Item.Settings().food(ModFoodComponents.GRAPES));
-    public static final Item NOODLES = register("noodles", Item::new,
-            new Item.Settings());
-    public static final Item SPAGHETTI = register("spaghetti", Item::new,
-            new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1));
     public static final Item STRAWBERRY = register("strawberry",
             createBlockItemWithUniqueName(ModBlocks.STRAWBERRY_BUSH), new Item.Settings().food(ModFoodComponents.STRAWBERRY));
-    public static final Item STRAWBERRY_JAM = register("strawberry_jam", Item::new,
-            new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
     public static final Item PEANUTS = register("peanuts", Item::new,
             new Item.Settings().food(ModFoodComponents.PEANUTS));
+
+    //Ingredients
+    public static final Item TOMATO_SAUCE = register("tomato_sauce", Item::new,
+            new Item.Settings());
+    public static final Item NOODLES = register("noodles", Item::new,
+            new Item.Settings());
+    public static final Item STRAWBERRY_JAM = register("strawberry_jam", Item::new,
+            new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
     public static final Item PEANUT_BUTTER = register("peanut_butter", Item::new,
             new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
-    public static final Item PBNJ = register("pbnj", Item::new,
-            new Item.Settings().food(ModFoodComponents.PBNJ).maxCount(1));
     public static final Item MACNOODLE = register("macnoodle", Item::new,
             new Item.Settings());
 
+
+    //Prepared Food
+    public static final Item PBNJ = register("pbnj", Item::new,
+            new Item.Settings().food(ModFoodComponents.PBNJ).maxCount(16));
+    public static final Item COOKED_CARROT = register("cooked_carrot", Item::new,
+            new Item.Settings().food(ModFoodComponents.COOKED_CARROT));
+    public static final Item SPAGHETTI = register("spaghetti", Item::new,
+            new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1));
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, path));

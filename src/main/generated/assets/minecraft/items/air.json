@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "anotherfarmermod:block/tomato_bush"
+    "model": "minecraft:item/air"
   }
 }

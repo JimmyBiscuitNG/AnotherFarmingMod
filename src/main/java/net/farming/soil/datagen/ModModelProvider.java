@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
                 BlockStateModelGenerator.CrossType.NOT_TINTED, StrawberryBush.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.TOMATO_BUSH,
                 BlockStateModelGenerator.CrossType.NOT_TINTED, TomatoBush.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.PEANUT_PLANT, BlockStateModelGenerator.CrossType.TINTED);
     }
 
 

@@ -1,13 +1,13 @@
 {
-  "feature": "anotherfarmermod:tomato_bush",
+  "feature": "anotherfarmermod:peanut_plant_key",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 1
+      "count": 3
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 35
+      "chance": 40
     },
     {
       "type": "minecraft:in_square"

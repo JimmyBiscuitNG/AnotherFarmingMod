@@ -1,5 +1,5 @@
-[17:58:06] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.4 with Fabric Loader 0.16.10
-[17:58:06] [main/INFO] (FabricLoader) Loading 55 mods:
+[00:03:41] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.4 with Fabric Loader 0.16.10
+[00:03:41] [main/INFO] (FabricLoader) Loading 55 mods:
 	- anotherfarmermod 1.0.0
 	- fabric-api 0.114.3+1.21.4
 	- fabric-api-base 0.4.54+b47eab6b04
@@ -55,26 +55,26 @@
 	- java 21
 	- minecraft 1.21.4
 	- mixinextras 0.4.1
-[17:58:07] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/michelle/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[17:58:07] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[17:58:07] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[17:58:07] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[17:58:07] [Datafixer Bootstrap/INFO] (Minecraft) 243 Datafixer optimizations took 103 milliseconds
-[17:58:10] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[17:58:10] [Render thread/INFO] (Minecraft) Setting user: Player397
-[17:58:10] [Render thread/INFO] (anotherfarmermod) Item Groups for anotherfarmermod
-[17:58:10] [Render thread/INFO] (anotherfarmermod) registering mod items for anotherfarmermod
-[17:58:10] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[17:58:10] [Render thread/INFO] (FabricDataGenHelper) Running data generator for anotherfarmermod
-[17:58:10] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:block
-[17:58:10] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:block finished after 1 ms
-[17:58:10] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Tags for minecraft:item
-[17:58:10] [Render thread/INFO] (Minecraft) anotherfarmermod/Tags for minecraft:item finished after 0 ms
-[17:58:10] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Block Loot Tables
-[17:58:10] [Render thread/INFO] (Minecraft) anotherfarmermod/Block Loot Tables finished after 8 ms
-[17:58:10] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/Model Definitions
-[17:58:10] [Render thread/INFO] (Minecraft) anotherfarmermod/Model Definitions finished after 27 ms
-[17:58:10] [Render thread/INFO] (Minecraft) Starting provider: anotherfarmermod/
-[17:58:10] [Render thread/INFO] (Minecraft) anotherfarmermod/ finished after 3 ms
-[17:58:10] [Render thread/INFO] (Minecraft) All providers took: 41 ms
-[17:58:10] [Render thread/INFO] (Minecraft) Caching: total files: 44, old count: 44, new count: 45, removed stale: 0, written: 2
+[00:03:41] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/michelle/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[00:03:41] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[00:03:41] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[00:03:41] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[00:03:42] [Datafixer Bootstrap/INFO] (Minecraft) 243 Datafixer optimizations took 118 milliseconds
+[00:03:44] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[00:03:44] [Render thread/INFO] (Minecraft) Setting user: Player676
+[00:03:44] [Render thread/INFO] (anotherfarmermod) Item Groups for anotherfarmermod
+[00:03:44] [Render thread/INFO] (anotherfarmermod) registering mod items for anotherfarmermod
+[00:03:44] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[00:03:44] [Render thread/INFO] (FabricDataGenHelper) Running data generator for anotherfarmermod
+[00:03:44] [Render thread/INFO] (Minecraft) Starting provider: AnotherFarmerMod/Tags for minecraft:block
+[00:03:44] [Render thread/INFO] (Minecraft) AnotherFarmerMod/Tags for minecraft:block finished after 1 ms
+[00:03:44] [Render thread/INFO] (Minecraft) Starting provider: AnotherFarmerMod/Tags for minecraft:item
+[00:03:44] [Render thread/INFO] (Minecraft) AnotherFarmerMod/Tags for minecraft:item finished after 0 ms
+[00:03:44] [Render thread/INFO] (Minecraft) Starting provider: AnotherFarmerMod/Block Loot Tables
+[00:03:44] [Render thread/INFO] (Minecraft) AnotherFarmerMod/Block Loot Tables finished after 8 ms
+[00:03:44] [Render thread/INFO] (Minecraft) Starting provider: AnotherFarmerMod/Model Definitions
+[00:03:44] [Render thread/INFO] (Minecraft) AnotherFarmerMod/Model Definitions finished after 28 ms
+[00:03:44] [Render thread/INFO] (Minecraft) Starting provider: AnotherFarmerMod/
+[00:03:44] [Render thread/INFO] (Minecraft) AnotherFarmerMod/ finished after 3 ms
+[00:03:44] [Render thread/INFO] (Minecraft) All providers took: 43 ms
+[00:03:44] [Render thread/INFO] (Minecraft) Caching: total files: 49, old count: 49, new count: 50, removed stale: 0, written: 3
