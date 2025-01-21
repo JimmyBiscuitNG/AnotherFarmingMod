@@ -20,7 +20,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:strawberry"
+          "name": "anotherfarmermod:strawberry"
         }
       ],
       "functions": [
@@ -58,7 +58,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:strawberry"
+          "name": "anotherfarmermod:strawberry"
         }
       ],
       "functions": [

@@ -28,11 +28,6 @@ public class TomatoBush extends SweetBerryBushBlock {
     }
 
     @Override
-    public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
-    }
-
-    @Override
     public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(ModItems.TOMATO);
     }

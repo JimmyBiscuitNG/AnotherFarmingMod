@@ -25,6 +25,7 @@ public class AnotherFarmerMod implements ModInitializer {
 		ModBlocks.registerBlockItems();
 		ModWorldGeneration.generateModWorldGen();
 
+
 		//strawberry block
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STRAWBERRY_BUSH, RenderLayer.getCutout());
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRAWBERRY_BUSH, 60, 30);

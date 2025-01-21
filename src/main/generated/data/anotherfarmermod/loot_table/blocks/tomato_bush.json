@@ -20,7 +20,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:tomato"
+          "name": "anotherfarmermod:tomato"
         }
       ],
       "functions": [
@@ -58,7 +58,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:tomato"
+          "name": "anotherfarmermod:tomato"
         }
       ],
       "functions": [

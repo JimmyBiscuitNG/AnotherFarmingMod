@@ -27,10 +27,6 @@ public class StrawberryBush extends SweetBerryBushBlock {
         super(settings);
     }
 
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
-    }
 
     @Override
     public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {

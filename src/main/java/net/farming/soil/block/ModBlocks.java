@@ -36,7 +36,7 @@ public class ModBlocks {
     public static final Block STRAWBERRY_BUSH = register(
             new StrawberryBush(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(STRAWBERRY_BUSH_KEY)),
             STRAWBERRY_BUSH_KEY,
-            false
+            true
 
 
     );
@@ -51,7 +51,7 @@ public class ModBlocks {
     public static final Block TOMATO_BUSH = register(
             new TomatoBush(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH).registryKey(TOMATO_BUSH_KEYS)),
             TOMATO_BUSH_KEYS,
-            false
+            true
 
 
     );
