@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -15,7 +17,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 
-public class ModItems {
+public class ModItems extends Items{
 
     //Raw Foods
     public static final Item CUCUMBER = register("cucumber", Item::new,
@@ -28,6 +30,8 @@ public class ModItems {
             createBlockItemWithUniqueName(ModBlocks.STRAWBERRY_BUSH), new Item.Settings().food(ModFoodComponents.STRAWBERRY));
     public static final Item PEANUTS = register("peanuts", Item::new,
             new Item.Settings().food(ModFoodComponents.PEANUTS));
+    public static final Item ONION = register("onion", Item::new,
+            new Item.Settings().food(ModFoodComponents.ONION));
 
     //Ingredients
     public static final Item TOMATO_SAUCE = register("tomato_sauce", Item::new,
@@ -38,7 +42,7 @@ public class ModItems {
             new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
     public static final Item PEANUT_BUTTER = register("peanut_butter", Item::new,
             new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
-    public static final Item MACNOODLE = register("macnoodle", Item::new,
+    public static final Item SALT = register("salt", Item::new,
             new Item.Settings());
 
 
@@ -49,16 +53,14 @@ public class ModItems {
             new Item.Settings().food(ModFoodComponents.COOKED_CARROT));
     public static final Item SPAGHETTI = register("spaghetti", Item::new,
             new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1));
+    public static final Item PB_COOKIE = register("pb_cookie", Item::new,
+            new Item.Settings().food(ModFoodComponents.PB_COOKIE));
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, path));
                 return Items.register(registryKey, factory, settings);
     }
 
-    public static Item registerBlock(String path, Function<Item.Settings, Item> blocks, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, path));
-                return Items.register(registryKey, factory, settings);
-    }
     private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
         return settings -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
     }
@@ -68,7 +70,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_INGREDIENTS_KEY).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(CUCUMBER);
             fabricItemGroupEntries.add(GRAPES);
-            fabricItemGroupEntries.add(MACNOODLE);
             fabricItemGroupEntries.add(NOODLES);
             fabricItemGroupEntries.add(PEANUTS);
             fabricItemGroupEntries.add(PEANUT_BUTTER);
@@ -76,12 +77,15 @@ public class ModItems {
             fabricItemGroupEntries.add(STRAWBERRY_JAM);
             fabricItemGroupEntries.add(TOMATO);
             fabricItemGroupEntries.add(TOMATO_SAUCE);
+            fabricItemGroupEntries.add(ONION);
+            fabricItemGroupEntries.add(SALT);
         });
 
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_ITEMS_KEY).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(COOKED_CARROT);
             fabricItemGroupEntries.add(SPAGHETTI);
             fabricItemGroupEntries.add(PBNJ);
+
         });
     }
 }

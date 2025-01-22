@@ -1,12 +1,14 @@
 package net.farming.soil.world;
 
 import net.farming.soil.AnotherFarmerMod;
+import net.farming.soil.world.gen.ModOrePlacement;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -16,19 +18,23 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STRAWBERRY_BUSH_PLACED = registryKey("strawberry_bush_placed");
     public static final RegistryKey<PlacedFeature> TOMATO_BUSH_PLACED = registryKey("tomato_bush_placed");
     public static final RegistryKey<PlacedFeature> PEANUT_PLANT_PLACED = registryKey("peanut_plant_placed");
+    public static final RegistryKey<PlacedFeature> SALT_ORE_PLACED = registryKey("salt_ore_placed");
 
 
     public static void bootstrap(Registerable<PlacedFeature> context){
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, STRAWBERRY_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_BUSH_KEY), CountPlacementModifier.of(3),
-                RarityFilterPlacementModifier.of(37), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+        register(context, SALT_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.SALT_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(17, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-10), YOffset.fixed(85))));
+
+        register(context, STRAWBERRY_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_BUSH_KEY), CountPlacementModifier.of(2),
+                RarityFilterPlacementModifier.of(65), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, TOMATO_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.TOMATO_BUSH_KEY), CountPlacementModifier.of(3),
-                RarityFilterPlacementModifier.of(35), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(50), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, PEANUT_PLANT_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.PEANUT_PLANT_KEY), CountPlacementModifier.of(3),
-                RarityFilterPlacementModifier.of(40), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(45), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
 

@@ -22,10 +22,16 @@ public class FarmerItemGroup {
             .displayName(Text.translatable("itemgroup.anotherfarmermod.farmer_ingredients"))
             .build();
 
+    public static final RegistryKey<ItemGroup> FARMER_BLOCKS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(AnotherFarmerMod.MOD_ID, "farmer_blocks"));
+    public static final ItemGroup FARMER_BLOCKS = FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SALT_BLOCK))
+            .displayName(Text.translatable("itemgroup.anotherfarmermod.farmer_blocks"))
+            .build();
+
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, FARMER_INGREDIENTS_KEY, FARMER_INGREDIENTS);
         Registry.register(Registries.ITEM_GROUP, FARMER_ITEMS_KEY, FARMER_ITEMS);
+        Registry.register(Registries.ITEM_GROUP, FARMER_BLOCKS_KEY, FARMER_BLOCKS);
         AnotherFarmerMod.LOGGER.info("Item Groups for " + AnotherFarmerMod.MOD_ID);
     }
 

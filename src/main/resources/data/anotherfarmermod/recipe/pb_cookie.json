@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "/": "minecraft:wheat"
+    "#": "minecraft:wheat",
+    "P": "anotherfarmermod:peanut_butter"
   },
   "pattern": [
-    "/ /",
-    " / "
+    "#P#"
 ],
   "result": {
     "count": 1,
-    "id": "anotherfarmermod:macnoodle"
+    "id": "anotherfarmermod:pb_cookie"
   }
 
 

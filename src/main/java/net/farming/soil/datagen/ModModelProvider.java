@@ -23,6 +23,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.TOMATO_BUSH,
                 BlockStateModelGenerator.CrossType.NOT_TINTED, TomatoBush.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCross(ModBlocks.PEANUT_PLANT, BlockStateModelGenerator.CrossType.TINTED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SALT_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SALT_ORE);
     }
 
 
@@ -33,7 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TOMATO_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRAPES, Models.GENERATED);
         itemModelGenerator.register(ModItems.NOODLES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MACNOODLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPAGHETTI, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY_JAM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEANUTS, Models.GENERATED);

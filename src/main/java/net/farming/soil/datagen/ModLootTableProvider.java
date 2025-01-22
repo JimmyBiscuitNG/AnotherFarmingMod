@@ -6,12 +6,14 @@ import net.farming.soil.block.ModBlocks;
 import net.farming.soil.block.custom.StrawberryBush;
 import net.farming.soil.block.custom.TomatoBush;
 import net.farming.soil.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
@@ -89,5 +91,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 )));
 
         addDrop(ModBlocks.PEANUT_PLANT, drops(ModItems.PEANUTS, UniformLootNumberProvider.create(1.0f, 3.0F)));
+        addDrop(ModBlocks.SALT_BLOCK, drops(ModBlocks.SALT_BLOCK));
+        this.addDrop( ModBlocks.SALT_ORE,
+            this.dropsWithSilkTouch(
+                ModBlocks.SALT_ORE,
+                    this.applyExplosionDecay(
+                            ModBlocks.SALT_ORE,
+                            ItemEntry.builder(ModItems.SALT)
+                                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 4.0f)))
+                                    .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+        }
     }
-}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "anotherfarmermod:block/salt_block"
+    }
+  }
+}

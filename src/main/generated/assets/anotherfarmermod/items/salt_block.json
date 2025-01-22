@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "anotherfarmermod:item/macnoodle"
+    "model": "anotherfarmermod:block/salt_block"
   }
 }

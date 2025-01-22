@@ -12,9 +12,13 @@
   "item.anotherfarmermod.peanut_butter": "Peanut Butter",
   "item.anotherfarmermod.pbnj": "Peanut Butter & Jelly Sandwich",
   "item.anotherfarmermod.strawberry_bush": "Strawberry Bush",
-  "item.anotherfarmermod.macnoodle": "Macaroni Noodles",
+  "item.anotherfarmermod.pb_cookie": "Peanut Butter Cookie",
+  "item.anotherfarmermod.onion": "Onion",
+  "item.anotherfarmermod.salt": "Salt",
+  "block.anotherfarmermod.salt_ore": "Salt Ore",
+  "block.anotherfarmermod.salt_block": "Salt Block",
   "block.anotherfarmermod.peanut_plant": "Peanut Plant",
   "itemgroup.anotherfarmermod.farmer_ingredients": "AFM Ingredients",
   "itemgroup.anotherfarmermod.farmer_items": "AFM Prepared Food",
-  "itemgroup.anotherfarmermod.farmer_misc": "AFM Misc"
+  "itemgroup.anotherfarmermod.farmer_blocks": "AFM Blocks"
 }
