@@ -13,4 +13,6 @@ public class ModFoodComponents {
     public static final FoodComponent PBNJ = new FoodComponent.Builder().nutrition(7).saturationModifier(0.5f).build();
     public static final FoodComponent ONION = new FoodComponent.Builder().nutrition(3).saturationModifier(0.5f).build();
     public static final FoodComponent PB_COOKIE = new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).build();
+    public static final FoodComponent CHEESE = new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).build();
+    public static final FoodComponent SALT = new FoodComponent.Builder().nutrition(1).saturationModifier(0.0f).alwaysEdible().build();
 }

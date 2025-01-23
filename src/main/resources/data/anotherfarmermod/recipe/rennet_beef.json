@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rennet",
+  "key": {
+    "S": "minecraft:beef",
+    "U": "minecraft:glass_bottle"
+
+  },
+  "pattern": [
+    "S",
+    "S",
+    "U"
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:rennet"
+  }
+
+
+}

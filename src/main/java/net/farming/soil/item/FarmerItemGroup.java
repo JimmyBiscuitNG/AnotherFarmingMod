@@ -1,7 +1,6 @@
 package net.farming.soil.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.minecraft.item.ItemGroup;

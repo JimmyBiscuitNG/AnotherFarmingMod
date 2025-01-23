@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": "minecraft:milk_bucket",
+    "S": "anotherfarmermod:salt",
+    "R": "anotherfarmermod:rennet"
+
+  },
+  "pattern": [
+    "SSS",
+    " R ",
+    " U "
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:cheese"
+  }
+
+
+}

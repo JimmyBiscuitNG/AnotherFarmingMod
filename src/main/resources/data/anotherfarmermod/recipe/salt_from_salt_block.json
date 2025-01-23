@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "salt",
+  "ingredients": [
+    "anotherfarmermod:salt_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "anotherfarmermod:salt"
+  }
+
+
+}

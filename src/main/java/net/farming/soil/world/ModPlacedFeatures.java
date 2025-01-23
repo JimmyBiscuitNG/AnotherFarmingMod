@@ -25,7 +25,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SALT_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.SALT_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(17, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-10), YOffset.fixed(85))));
+                ModOrePlacement.modifiersWithCount(17, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-25), YOffset.fixed(105))));
 
         register(context, STRAWBERRY_BUSH_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_BUSH_KEY), CountPlacementModifier.of(2),
                 RarityFilterPlacementModifier.of(65), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of());

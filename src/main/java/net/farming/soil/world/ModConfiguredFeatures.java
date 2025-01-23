@@ -3,6 +3,7 @@ package net.farming.soil.world;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.farming.soil.block.custom.StrawberryBush;
+import net.farming.soil.block.custom.TomatoBush;
 import net.minecraft.block.Blocks;
 
 import net.minecraft.registry.Registerable;
@@ -12,6 +13,8 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
@@ -34,24 +37,45 @@ public class ModConfiguredFeatures {
         register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSaltOres, 8));
 
 
-        register(context, STRAWBERRY_BUSH_KEY, Feature.FLOWER,
-                ConfiguredFeatures.createRandomPatchFeatureConfig(
-                        Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.STRAWBERRY_BUSH.getDefaultState().
-                                with(StrawberryBush.AGE, 3))),
-                        List.of(Blocks.GRASS_BLOCK, Blocks.PODZOL)));
+        register(context, STRAWBERRY_BUSH_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchFeatureConfig(64, 7, 3,
+                        PlacedFeatures.createEntry(
+                                Feature.SIMPLE_BLOCK,
+                                new SimpleBlockFeatureConfig(
+                                        BlockStateProvider.of(
+                                                ModBlocks.STRAWBERRY_BUSH.getDefaultState().with(StrawberryBush.AGE, 3))),
+                                BlockPredicate.allOf(
+                                        BlockPredicate.replaceable(),
+                                        BlockPredicate.noFluid(),
+                                        BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.GRASS_BLOCK))
+                        )));
 
-        register(context, TOMATO_BUSH_KEY, Feature.FLOWER,
-                ConfiguredFeatures.createRandomPatchFeatureConfig(
-                        Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.TOMATO_BUSH.getDefaultState().
-                                with(StrawberryBush.AGE, 3))),
-                        List.of(Blocks.GRASS_BLOCK)));
 
-        register(context, PEANUT_PLANT_KEY,
-                Feature.FLOWER,
-                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PEANUT_PLANT))));
+        register(context, TOMATO_BUSH_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchFeatureConfig(45, 5, 2,
+                        PlacedFeatures.createEntry(
+                                Feature.SIMPLE_BLOCK,
+                                new SimpleBlockFeatureConfig(
+                                        BlockStateProvider.of(
+                                                ModBlocks.TOMATO_BUSH.getDefaultState().with(TomatoBush.AGE, 3))),
+                                BlockPredicate.allOf(
+                                        BlockPredicate.replaceable(),
+                                        BlockPredicate.noFluid(),
+                                        BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.GRASS_BLOCK))
+                        )));
+
+        register(context, PEANUT_PLANT_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchFeatureConfig(64, 7, 3,
+                        PlacedFeatures.createEntry(
+                                Feature.SIMPLE_BLOCK,
+                                new SimpleBlockFeatureConfig(
+                                        BlockStateProvider.of(
+                                                ModBlocks.PEANUT_PLANT)),
+                                BlockPredicate.allOf(
+                                        BlockPredicate.replaceable(),
+                                        BlockPredicate.noFluid(),
+                                        BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.GRASS_BLOCK))
+                        )));
     }
 
 

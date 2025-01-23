@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.component.type.FoodComponent;
-import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -27,11 +25,14 @@ public class ModItems extends Items{
     public static final Item GRAPES = register("grapes", Item::new,
             new Item.Settings().food(ModFoodComponents.GRAPES));
     public static final Item STRAWBERRY = register("strawberry",
-            createBlockItemWithUniqueName(ModBlocks.STRAWBERRY_BUSH), new Item.Settings().food(ModFoodComponents.STRAWBERRY));
+            createBlockItemWithUniqueName(ModBlocks.STRAWBERRY_BUSH), new Item.Settings().food(
+                    ModFoodComponents.STRAWBERRY, ModConsumableComponents.STRAWBERRY));
     public static final Item PEANUTS = register("peanuts", Item::new,
-            new Item.Settings().food(ModFoodComponents.PEANUTS));
+            new Item.Settings().food(ModFoodComponents.PEANUTS, ModConsumableComponents.PEANUTS));
     public static final Item ONION = register("onion", Item::new,
             new Item.Settings().food(ModFoodComponents.ONION));
+    public static final Item CHEESE = register("cheese", Item::new,
+            new Item.Settings().food(ModFoodComponents.CHEESE));
 
     //Ingredients
     public static final Item TOMATO_SAUCE = register("tomato_sauce", Item::new,
@@ -43,12 +44,14 @@ public class ModItems extends Items{
     public static final Item PEANUT_BUTTER = register("peanut_butter", Item::new,
             new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
     public static final Item SALT = register("salt", Item::new,
-            new Item.Settings());
+            new Item.Settings().food(ModFoodComponents.SALT, ModConsumableComponents.SALT));
+    public static final Item RENNET = register("rennet", Item::new,
+            new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE));
 
 
     //Prepared Food
     public static final Item PBNJ = register("pbnj", Item::new,
-            new Item.Settings().food(ModFoodComponents.PBNJ).maxCount(16));
+            new Item.Settings().food(ModFoodComponents.PBNJ, ModConsumableComponents.PBNJ).maxCount(16));
     public static final Item COOKED_CARROT = register("cooked_carrot", Item::new,
             new Item.Settings().food(ModFoodComponents.COOKED_CARROT));
     public static final Item SPAGHETTI = register("spaghetti", Item::new,
@@ -69,16 +72,19 @@ public class ModItems extends Items{
 
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_INGREDIENTS_KEY).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(CUCUMBER);
+            fabricItemGroupEntries.add(CHEESE);
             fabricItemGroupEntries.add(GRAPES);
             fabricItemGroupEntries.add(NOODLES);
             fabricItemGroupEntries.add(PEANUTS);
             fabricItemGroupEntries.add(PEANUT_BUTTER);
             fabricItemGroupEntries.add(STRAWBERRY);
             fabricItemGroupEntries.add(STRAWBERRY_JAM);
+            fabricItemGroupEntries.add(RENNET);
             fabricItemGroupEntries.add(TOMATO);
             fabricItemGroupEntries.add(TOMATO_SAUCE);
             fabricItemGroupEntries.add(ONION);
             fabricItemGroupEntries.add(SALT);
+
         });
 
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_ITEMS_KEY).register(fabricItemGroupEntries -> {
