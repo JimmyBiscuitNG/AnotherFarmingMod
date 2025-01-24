@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -11,6 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.function.Function;
 
@@ -31,6 +33,8 @@ public class ModItems extends Items{
             new Item.Settings().food(ModFoodComponents.PEANUTS, ModConsumableComponents.PEANUTS));
     public static final Item ONION = register("onion", Item::new,
             new Item.Settings().food(ModFoodComponents.ONION));
+    public static final Item MANGO = register("mango", Item::new,
+            new Item.Settings().food(ModFoodComponents.MANGO, ModConsumableComponents.MANGO));
     public static final Item CHEESE = register("cheese", Item::new,
             new Item.Settings().food(ModFoodComponents.CHEESE));
 
@@ -58,6 +62,13 @@ public class ModItems extends Items{
             new Item.Settings().food(ModFoodComponents.SPAGHETTI).maxCount(1));
     public static final Item PB_COOKIE = register("pb_cookie", Item::new,
             new Item.Settings().food(ModFoodComponents.PB_COOKIE));
+    public static final Item GOLDEN_MANGO = register("golden_mango", Item::new,
+            new Item.Settings().food(ModFoodComponents.GOLDEN_MANGO, ModConsumableComponents.GOLDEN_MANGO));
+    public static final Item E_GOLDEN_MANGO = register("e_golden_mango", Item::new,
+            new Item.Settings().rarity(Rarity.RARE).food(ModFoodComponents.E_GOLDEN_MANGO, ModConsumableComponents.E_GOLDEN_MANGO)
+                    .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true));
+    public static final Item GOLDEN_STRAWBERRY = register("golden_strawberry", Item::new,
+            new Item.Settings().food(ModFoodComponents.GOLDEN_STRAWBERRY, ModConsumableComponents.GOLDEN_STRAWBERRY));
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, path));
@@ -74,6 +85,7 @@ public class ModItems extends Items{
             fabricItemGroupEntries.add(CUCUMBER);
             fabricItemGroupEntries.add(CHEESE);
             fabricItemGroupEntries.add(GRAPES);
+            fabricItemGroupEntries.add(MANGO);
             fabricItemGroupEntries.add(NOODLES);
             fabricItemGroupEntries.add(PEANUTS);
             fabricItemGroupEntries.add(PEANUT_BUTTER);
@@ -89,8 +101,13 @@ public class ModItems extends Items{
 
         ItemGroupEvents.modifyEntriesEvent(FarmerItemGroup.FARMER_ITEMS_KEY).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(COOKED_CARROT);
+            fabricItemGroupEntries.add(GOLDEN_MANGO);
+            fabricItemGroupEntries.add(E_GOLDEN_MANGO);
+            fabricItemGroupEntries.add(GOLDEN_STRAWBERRY);
             fabricItemGroupEntries.add(SPAGHETTI);
+            fabricItemGroupEntries.add(PB_COOKIE);
             fabricItemGroupEntries.add(PBNJ);
+
 
         });
     }

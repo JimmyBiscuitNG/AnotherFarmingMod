@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "anotherfarmermod:peanut_butter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "anotherfarmermod:pb_cookie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pb"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "anotherfarmermod:pb_cookie"
+    ]
+  }
+}

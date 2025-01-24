@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noodles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "anotherfarmermod:noodles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "anotherfarmermod:spaghetti"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noodles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "anotherfarmermod:spaghetti"
+    ]
+  }
+}

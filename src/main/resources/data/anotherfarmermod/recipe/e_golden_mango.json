@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": "anotherfarmermod:mango",
+    "G": "minecraft:gold_block"
+  },
+  "pattern": [
+    "GGG",
+    "GMG",
+    "GGG"
+],
+  "result": {
+    "count": 1,
+    "id": "anotherfarmermod:e_golden_mango"
+  }
+
+
+}

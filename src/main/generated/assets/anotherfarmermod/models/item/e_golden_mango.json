@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "anotherfarmermod:item/e_golden_mango"
+  }
+}
