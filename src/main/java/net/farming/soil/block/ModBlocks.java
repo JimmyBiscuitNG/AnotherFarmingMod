@@ -3,6 +3,8 @@ package net.farming.soil.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.custom.PeanutPlant;
+import net.farming.soil.block.custom.SoupPot.WaterSoupPot;
+import net.farming.soil.block.custom.SoupPot.SoupPot;
 import net.farming.soil.block.custom.StrawberryBush;
 import net.farming.soil.block.custom.TomatoBush;
 import net.farming.soil.item.FarmerItemGroup;
@@ -13,6 +15,7 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -39,6 +42,9 @@ public class ModBlocks {
             .mapColor(MapColor.GRAY).sounds(BlockSoundGroup.STONE).instrument(NoteBlockInstrument.COW_BELL).requiresTool().strength(1.5F, 6.0F));
     public static final Block SALT_BLOCK = registerBlockItem("salt_block", Block::new, AbstractBlock.Settings.create()
             .mapColor(MapColor.GRAY).sounds(BlockSoundGroup.STONE).instrument(NoteBlockInstrument.COW_BELL).requiresTool().strength(2.5F, 7.0F));
+    public static final Block SOUP_POT = registerBlockItem("soup_pot", SoupPot::new, AbstractBlock.Settings.create()
+            .mapColor(DyeColor.GRAY).sounds(BlockSoundGroup.LANTERN).strength(1F));
+    public static final Block WATER_SOUP_POT = registerBlock("water_soup_pot", WaterSoupPot::new, AbstractBlock.Settings.copy(SOUP_POT));
 
 
     public static void registerBlockItems() {

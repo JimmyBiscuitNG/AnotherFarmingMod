@@ -89,6 +89,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PEANUT_PLANT, drops(ModItems.PEANUTS, UniformLootNumberProvider.create(1.0f, 3.0F)));
 
+        addDrop(ModBlocks.SOUP_POT);
+
+        addDrop(ModBlocks.WATER_SOUP_POT, drops(ModBlocks.SOUP_POT));
+
         addDrop(ModBlocks.SALT_BLOCK, drops(ModBlocks.SALT_BLOCK));
 
         this.addDrop( ModBlocks.SALT_ORE,
@@ -107,7 +111,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                         .rolls(ConstantLootNumberProvider.create(1.0F))
                                         .conditionally(this.createWithoutShearsOrSilkTouchCondition())
                                         .with(
-                                                ((LeafEntry.Builder) this.addSurvivesExplosionCondition(Blocks.JUNGLE_LEAVES, ItemEntry.builder(ModItems.MANGO)))
+                                                ((LeafEntry.Builder<?>) this.addSurvivesExplosionCondition(Blocks.JUNGLE_LEAVES, ItemEntry.builder(ModItems.MANGO)))
                                                         .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.02F, 0.022222223F, 0.025F, 0.033333333F, 0.1F))
                                         ).build()));
         }

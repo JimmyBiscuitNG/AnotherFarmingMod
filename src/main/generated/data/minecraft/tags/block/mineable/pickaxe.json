@@ -1,6 +1,8 @@
 {
   "values": [
     "anotherfarmermod:salt_block",
-    "anotherfarmermod:salt_ore"
+    "anotherfarmermod:salt_ore",
+    "anotherfarmermod:soup_pot",
+    "anotherfarmermod:water_soup_pot"
   ]
 }

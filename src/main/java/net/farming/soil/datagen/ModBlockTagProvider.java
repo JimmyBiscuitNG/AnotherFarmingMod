@@ -17,6 +17,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.SALT_BLOCK)
-                .add(ModBlocks.SALT_ORE);
+                .add(ModBlocks.SALT_ORE)
+                .add(ModBlocks.SOUP_POT)
+                .add(ModBlocks.WATER_SOUP_POT);
     }
 }
