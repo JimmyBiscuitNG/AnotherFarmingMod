@@ -2,7 +2,6 @@
   "values": [
     "anotherfarmermod:salt_block",
     "anotherfarmermod:salt_ore",
-    "anotherfarmermod:soup_pot",
-    "anotherfarmermod:water_soup_pot"
+    "anotherfarmermod:soup_pot_entity"
   ]
 }

@@ -5,6 +5,7 @@ import net.farming.soil.AnotherFarmerMod;
 import net.farming.soil.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ContainerComponent;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -14,7 +15,9 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 
 public class ModItems extends Items{
@@ -70,11 +73,19 @@ public class ModItems extends Items{
     public static final Item GOLDEN_STRAWBERRY = register("golden_strawberry", Item::new,
             new Item.Settings().food(ModFoodComponents.GOLDEN_STRAWBERRY, ModConsumableComponents.GOLDEN_STRAWBERRY));
 
+    //special blocks
+    public static final Item SOUP_POT = register(ModBlocks.SOUP_POT_ENTITY, (UnaryOperator<Item.Settings>)
+            (settings -> settings.component(DataComponentTypes.CONTAINER, ContainerComponent.DEFAULT)));
+
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AnotherFarmerMod.MOD_ID, path));
                 return Items.register(registryKey, factory, settings);
     }
 
+
+    public static Item register(Block block, UnaryOperator<Item.Settings> settingsOperator) {
+        return register(block, (BiFunction<Block, Item.Settings, Item>) ((blockx, settings) -> new BlockItem(blockx, (Item.Settings) settingsOperator.apply(settings))));
+    }
     private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
         return settings -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
     }

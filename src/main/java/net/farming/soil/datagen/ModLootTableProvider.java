@@ -89,9 +89,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PEANUT_PLANT, drops(ModItems.PEANUTS, UniformLootNumberProvider.create(1.0f, 3.0F)));
 
-        addDrop(ModBlocks.SOUP_POT);
-
-        addDrop(ModBlocks.WATER_SOUP_POT, drops(ModBlocks.SOUP_POT));
+        addDrop(ModBlocks.SOUP_POT_ENTITY);
 
         addDrop(ModBlocks.SALT_BLOCK, drops(ModBlocks.SALT_BLOCK));
 

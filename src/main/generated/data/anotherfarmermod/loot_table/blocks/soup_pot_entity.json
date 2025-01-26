@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anotherfarmermod:soup_pot"
+          "name": "anotherfarmermod:soup_pot_entity"
         }
       ],
       "rolls": 1.0

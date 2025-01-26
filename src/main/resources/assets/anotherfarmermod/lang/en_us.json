@@ -24,8 +24,7 @@
   "block.anotherfarmermod.salt_ore": "Salt Ore",
   "block.anotherfarmermod.salt_block": "Salt Block",
   "block.anotherfarmermod.peanut_plant": "Peanut Plant",
-  "block.anotherfarmermod.soup_pot": "Soup Pot",
-  "block.anotherfarmermod.water_soup_pot": "Water Soup Pot ",
+  "block.anotherfarmermod.soup_pot_entity": "Soup Pot",
   "itemgroup.anotherfarmermod.farmer_ingredients": "AFM Ingredients",
   "itemgroup.anotherfarmermod.farmer_items": "AFM Prepared Food",
   "itemgroup.anotherfarmermod.farmer_blocks": "AFM Blocks"

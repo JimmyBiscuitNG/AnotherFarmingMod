@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.farming.soil.block.ModBlockEntityTypes;
 import net.farming.soil.block.ModBlocks;
 import net.farming.soil.item.FarmerItemGroup;
 import net.farming.soil.item.ModItems;
@@ -23,6 +24,7 @@ public class AnotherFarmerMod implements ModInitializer {
 		FarmerItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerBlockItems();
+		ModBlockEntityTypes.initialize();
 		ModWorldGeneration.generateModWorldGen();
 
 
