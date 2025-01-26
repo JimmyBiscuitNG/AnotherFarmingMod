@@ -34,14 +34,11 @@ public class SoupPotEntity extends BlockEntity implements SoupPotInv{
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
         super.readNbt(nbt, registries);
-        this.itemsBeingCooked.clear();
-        Inventories.readNbt(nbt, itemsBeingCooked, registries);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
         super.writeNbt(nbt, registries);
-        Inventories.writeNbt(nbt, this.itemsBeingCooked, true, registries);
     }
 
 

@@ -8,7 +8,7 @@ public interface SoupPotInv extends Inventory {
     DefaultedList<ItemStack> getItems();
 
     static SoupPotInv of(DefaultedList<ItemStack> items){
-        return () -> items;
+        return null;
     }
 
     static SoupPotInv ofSize(int size) {
